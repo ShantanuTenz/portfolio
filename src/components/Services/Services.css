@@ -1,0 +1,106 @@
+.services {
+  padding: 0 3rem 0 3rem;
+  display: flex;
+  height: 20rem;
+  margin-top: 9rem;
+  margin-bottom: 9rem;
+  /* scroll view */
+  padding-top: 3rem;
+}
+/* left side */
+.awesome {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* gap: 20px; */
+}
+
+.awesome > :nth-child(1) {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.awesome > :nth-child(2) {
+  color: var(--orange);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.awesome > :nth-child(3) {
+  color: var(--black);
+  font-size: 14px;
+  margin-top: 1rem;
+}
+.awesome > :nth-child(4) {
+  color: var(--black);
+  font-size: 14px;
+}
+
+.s-button {
+  width: 8rem;
+  height: 2rem;
+  margin-top: 1rem;
+}
+/* right sided */
+.cards {
+  position: relative;
+}
+.cards > * {
+  position: absolute;
+}
+
+/* blur */
+.s-blur2 {
+  left: 14rem;
+  top: 8rem;
+}
+
+.s-blur1 {
+  top: 13rem;
+  left: -18rem;
+}
+
+.right-div{
+  margin-left: 15rem;
+}
+
+
+@media screen and (max-width: 480px) {
+  .services {
+    margin-top: 5rem;
+    flex-direction: column;
+    gap: 5rem;
+    height: 50rem;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 17rem;
+  }
+  .cards > * {
+    position: static;
+  }
+  .right-div{
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .right-div{
+    margin-left: 5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .right-div{
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .right-div{
+    margin-left: 10rem;
+  }
+}

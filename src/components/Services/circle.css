@@ -1,0 +1,76 @@
+/* Styles for rotating circle */
+:root {
+  --circle-radius: 250px; /* Default radius */
+}
+
+.circle-container {
+  position: relative;
+  width: calc(var(--circle-radius) * 2); 
+  height: calc(var(--circle-radius) * 2);
+  margin: 0 auto; 
+  animation: rotate 20s linear infinite; 
+}
+
+.imgs{
+  animation: images 20s linear infinite;
+}
+
+@keyframes images {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Queries for responsive adjustments */
+@media screen and (max-width: 480px) {
+  :root {
+    --circle-radius: 180px; /* Increased radius for small screens */
+  }
+  .circle-container img {
+    width: 40px; /* Smaller image size for small screens */
+    height: 40px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  :root {
+    --circle-radius: 200px; /* Medium radius for medium screens */
+  }
+  .circle-container img {
+    width: 50px; /* Medium image size for medium screens */
+    height: 50px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    --circle-radius: 250px; /* Default radius for larger screens */
+  }
+  .circle-container img {
+    width: 60px; /* Default image size for larger screens */
+    height: 60px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  :root {
+    --circle-radius: 250px; /* Larger radius for extra-large screens */
+  }
+  .circle-container img {
+    width: 70px; /* Larger image size for extra-large screens */
+    height: 70px;
+  }
+}
